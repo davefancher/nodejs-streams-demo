@@ -20,10 +20,17 @@ process.stdout.write("Yeah, it certainly looks like it!\r\n");
 
 // https://www.freecodecamp.org/news/programming-language-limericks-a8fb3416e0e4/
 
-const output = fs.createWriteStream("./writableStreamOutput.txt");
-output.write("JavaScript was made for the masses,\r\n");
-output.write("It lacked types, and modules, and classes.\r\n");
-output.write("But it became quite the giant,\r\n");
-output.write("Because it ran on server and client,\r\n");
-output.write("Until it crashed both, despite 100 test passes.\r\n");
+const limerick = [
+    "JavaScript was made for the masses,",
+    "It lacked types, and modules, and classes.",
+    "But it became quite the giant,",
+    "Because it ran on server and client,",
+    "Until it crashed both, despite 100 test passes."];
+
+const output = fs
+    .createWriteStream("./limerick.txt")
+    .on("finish", x => console.log("Done writing limerick to file"));
+
+limerick.forEach(line => output.write(`${line}\r\n`));
+
 output.end();
