@@ -41,3 +41,6 @@ typings/
 
 # macOS
 .DS_Store
+
+# Sample output files
+*/**/limerick.txt
