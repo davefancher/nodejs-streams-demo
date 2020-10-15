@@ -1,0 +1,11 @@
+{
+  "name": "dwf-node-streams-demo",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "Dave Fancher",
+  "license": "MIT",
+  "dependencies": {
+    "csv": "^5.3.2"
+  }
+}
