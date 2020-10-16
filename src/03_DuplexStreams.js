@@ -1,8 +1,7 @@
 "use strict";
 
-const { Buffer } = require("buffer");
 const fs = require("fs");
-const { Readable, Transform } = require("stream");
+const { Transform } = require("stream");
 const { TextDecoder } = require("util");
 const { ConsoleColor, logPretty } = require("./utils");
 
